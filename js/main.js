@@ -1,5 +1,3 @@
-import config from 'config';
-
 let restaurants,
   neighborhoods,
   cuisines
@@ -70,6 +68,8 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   });
 }
 
+console.log(config.MAPBOX_API);
+
 /**
  * Initialize leaflet map, called from HTML.
  */
@@ -80,7 +80,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: 'config.MAPBOX_API',
+    mapboxToken: config.MAPBOX_API,
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
