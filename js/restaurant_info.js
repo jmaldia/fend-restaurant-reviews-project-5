@@ -1,3 +1,5 @@
+import config from 'config';
+
 let restaurant;
 var newMap;
 
