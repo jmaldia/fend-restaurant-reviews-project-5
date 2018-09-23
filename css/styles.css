@@ -277,7 +277,7 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 20px 20px;
   position: relative;
   width: 85%;
 }
@@ -292,6 +292,28 @@ nav h1 a {
 /* Media Queries */
 @media only screen and (max-width: 600px) {
   #restaurants-list li {
+    width: 100%;
+  }
+
+  #restaurant-container, #reviews-container {
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #fff;
+    padding: 30px;
+    width: 100%;
+  }
+
+  #restaurant-container img, #restaurant-container #restaurant-cuisine, #reviews-container, #reviews-list li {
+    width: 100%;
+  }
+
+  #restaurant-name, #reviews-container h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .inside #footer {
+    bottom: 0;
+    position: relative;
     width: 100%;
   }
 }
@@ -311,7 +333,7 @@ nav h1 a {
   .inside #map-container {
     position: fixed;
     right: 0;
-    top: 80px;
+    top: 70px;
     width: 50%;
     height: 100vh;
   }
