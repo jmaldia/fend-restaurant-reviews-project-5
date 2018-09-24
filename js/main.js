@@ -212,3 +212,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+/* Caching for offline use
+ */
+// Check if the browser supports Service Workers
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/sw.js')
+    .then( console.log('Success! Service worker was registered') )
+    .catch((err) => {
+      console.error(`Uh oh, something went wrong. \n Error: ${err}`);
+    });
+}
