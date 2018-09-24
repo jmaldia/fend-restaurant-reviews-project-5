@@ -151,7 +151,8 @@ nav h1 a {
 }
 #restaurants-list li {
   background-color: #fff;
-  border: 2px solid #ccc;
+  border: 1px solid #efefef;
+  border-radius: 4px;
   font-family: Arial,sans-serif;
   margin: 15px;
   min-height: 380px;
@@ -162,7 +163,7 @@ nav h1 a {
   min-width: 250px;
 }
 #restaurants-list .restaurant-img {
-  background-color: #ccc;
+  background-color: #eee;
   display: block;
   margin: 0;
   max-width: 100%;
@@ -184,8 +185,9 @@ nav h1 a {
   font-size: 11pt;
 }
 #restaurants-list li a {
+  width: 100%;
   background-color: orange;
-  border-bottom: 3px solid #eee;
+  border-radius: 3px;
   color: #fff;
   display: inline-block;
   font-size: 10pt;
@@ -239,13 +241,14 @@ nav h1 a {
   margin: 10px 0px;
 }
 #restaurant-cuisine {
+  border-radius: 2px;
   background-color: #333;
   color: #ddd;
   font-size: 12pt;
   font-weight: 300;
   letter-spacing: 10px;
   margin: 0 0 20px;
-  padding: 2px 0;
+  padding: 5px 0;
   text-align: center;
   text-transform: uppercase;
 	width: 90%;
@@ -272,7 +275,8 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
+  border-radius: 4px;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -291,6 +295,11 @@ nav h1 a {
 
 /* Media Queries */
 @media only screen and (max-width: 600px) {
+
+  .filter-options select {
+    width: 300px;
+  }
+  
   #restaurants-list li {
     width: 100%;
   }
@@ -336,5 +345,13 @@ nav h1 a {
     top: 70px;
     width: 50%;
     height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  #restaurants-list {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
