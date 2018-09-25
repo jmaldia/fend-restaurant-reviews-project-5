@@ -1,3 +1,7 @@
+// Reference: https://developers.google.com/web/fundamentals/primers/service-workers/
+
+const CACHE_NAME = restaraunt-cache-1;
+
 const filesToCache = [
     '/',
     '/index.html',
@@ -21,19 +25,46 @@ const filesToCache = [
 
 // Listens for cache install
 self.addEventListener('install', (event) => {
+    // Install steps
     event.waitUntil(
-        caches.open('restaraunt-cache-1')
+        caches.open(CACHE_NAME)
             .then((cache) => {
                 return cache.addAll(filesToCache);
             })
     )
 });
 
+// Fetches cache
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request)
             .then((response) => {
-                return response ? response : fetch(event.request);
-            })
+                // Returns response when cache exists
+                if (response) {
+                    return response;
+                }
+
+                // Retrieve data from the network
+                let clonedResponse = event.request.clone();
+
+                return fetch(clonedResponse)
+                    .then((response) => {
+                        // Check if response is valid
+                        if(!response || response.status !== 200 || response.type !== 'basic') {
+                            return response;
+                        }
+
+                        let clonedResponseToCache = response.clone();
+
+                        caches.open(CACHE_NAME)
+                            .then((cache) => {
+                                // Store cache
+                                cache.put(event.request, clonedResponseToCache);
+                            });
+
+                        return response;
+                    });
+            }
+        )
     )
-})
+});
