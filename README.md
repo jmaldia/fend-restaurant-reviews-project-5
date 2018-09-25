@@ -17,7 +17,7 @@ You have been provided the code for a restaurant reviews website. The code has a
 |2. Add the following code ```let config = {
     MAPBOX_API: '<your MAPBOX API KEY HERE>'
 }```|
-|3. Replace with your own Key
+|3. Replace with your own Key|
 |--------------------|
 
 ### What do I do from here?
