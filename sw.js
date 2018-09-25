@@ -1,6 +1,6 @@
 // Reference: https://developers.google.com/web/fundamentals/primers/service-workers/
 
-const CACHE_NAME = restaraunt-cache-1;
+const CACHE_NAME = 'restaurant-cache-1';
 
 const filesToCache = [
     '/',
