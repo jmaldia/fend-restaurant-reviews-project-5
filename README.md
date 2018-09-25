@@ -14,9 +14,7 @@ You have been provided the code for a restaurant reviews website. The code has a
 |--------------------|
 |This project does not have the API KEY on the code for security purposes. To run the project, you need to add your own key. You can follow these instructions.|
 |1. Create a new file called `config.js` in the `js` folder|
-|2. Add the following code ```let config = {
-    MAPBOX_API: '<your MAPBOX API KEY HERE>'
-}```|
+|2. Add the following code ```let config = { MAPBOX_API: '<your MAPBOX API KEY HERE>' }```|
 |3. Replace with your own Key|
 |--------------------|
 
