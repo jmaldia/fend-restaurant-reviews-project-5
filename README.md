@@ -10,6 +10,16 @@ For the **Restaurant Reviews** projects, you will incrementally convert a static
 
 You have been provided the code for a restaurant reviews website. The code has a lot of issues. It’s barely usable on a desktop browser, much less a mobile device. It also doesn’t include any standard accessibility features, and it doesn’t work offline at all. Your job is to update the code to resolve these issues while still maintaining the included functionality. 
 
+|### Important Notice|
+|--------------------|
+|This project does not have the API KEY on the code for security purposes. To run the project, you need to add your own key. You can follow these instructions.|
+|1. Create a new file called `config.js` in the `js` folder|
+|2. Add the following code ```let config = {
+    MAPBOX_API: '<your MAPBOX API KEY HERE>'
+}
+|3. Replace with your own Key
+|--------------------|
+
 ### What do I do from here?
 
 1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
