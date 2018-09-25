@@ -16,7 +16,6 @@ You have been provided the code for a restaurant reviews website. The code has a
 |1. Create a new file called `config.js` in the `js` folder|
 |2. Add the following code ```let config = { MAPBOX_API: '<your MAPBOX API KEY HERE>' }```|
 |3. Replace with your own Key|
-|--------------------|
 
 ### What do I do from here?
 
